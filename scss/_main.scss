@@ -1,0 +1,153 @@
+.main {
+  display: grid;
+  grid-template-rows: 50px 1fr 1fr 1fr;
+  padding-bottom: 47px;
+}
+
+.group {
+  border-bottom: 1px solid $border-header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+
+  &__btn {
+    cursor: pointer;
+    padding: 20px 0 16px 0;
+    background: transparent;
+    border: none;
+    font-family: $fontSpartan;
+    font-weight: 700;
+    color: $silver;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 4px solid transparent;
+
+    &.active {
+      color: $mainColor;
+      border-color: hsla(194, 48%, 50%, 1);
+    }
+  }
+}
+
+img {
+  vertical-align: top;
+}
+
+.planet {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    display: block;
+    width: 114px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__geology {
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    width: 60px;
+    position: absolute;
+    top: 80%;
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.description {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-family: $fontAntonio;
+    color: $mainColor;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__info {
+    padding: 16px 0 32px 0;
+    text-align: center;
+    font-family: $fontSpartan;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 22px;
+    color: $mainColor;
+  }
+
+  &__link {
+    font-family: $fontSpartan;
+    font-size: 12px;
+    line-height: 25px;
+    color: $silver;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--source {
+      font-weight: 400;
+    }
+
+    &--target {
+      color: $silver;
+      font-weight: 700;
+      padding: 0 5px;
+    }
+
+    &--icon {
+      font-size: 12px;
+    }
+  }
+}
+
+.stats {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    padding: 9px 24px 13px 24px;
+    border: 1px solid $dark-silver;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: $fontSpartan;
+    font-weight: 700;
+    font-size: 8px;
+    letter-spacing: 0.73px;
+    color: $silver;
+  }
+
+  &__value {
+    text-transform: uppercase;
+    font-family: $fontAntonio;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: -0.75px;
+    color: $mainColor;
+  }
+}

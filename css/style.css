@@ -1,0 +1,366 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap");
+@font-face {
+  font-family: "icomoon";
+  src: url("../assets/fonts/icomoon.ttf?795sa6") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron:before {
+  content: "";
+}
+
+.icon-hamburger:before {
+  content: "";
+}
+
+.icon-source:before {
+  content: "";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #070724;
+  background-image: url(../assets/images/background-stars.svg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+.header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 16px 24px;
+}
+.header__logo {
+  font-family: "Antonio";
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -1.05px;
+}
+
+.menu {
+  list-style: none;
+  position: absolute;
+  top: 101%;
+  left: -100%;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  padding: 44px 24px 0 24px;
+  background-color: #070724;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 999;
+}
+.menu.active {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.menu__btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease-in-out 0s;
+  transition: color 0.3s ease-in-out 0s;
+}
+.menu__btn.active {
+  color: #838391;
+}
+.menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.menu__item:last-child {
+  border-bottom: none;
+}
+.menu__icon--circle {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.menu__link {
+  padding: 10px 0 10px 25px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-family: "Spartan";
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1.36px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  margin: 10px 0;
+}
+.menu__icon {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.menu__icon--mercury {
+  background-color: #DEF4FC;
+}
+.menu__icon--venus {
+  background-color: #F7CC7F;
+}
+.menu__icon--earth {
+  background-color: #545BFE;
+}
+.menu__icon--mars {
+  background-color: #FF6A45;
+}
+.menu__icon--jupiter {
+  background-color: #ECAD7A;
+}
+.menu__icon--saturn {
+  background-color: #FCCB6B;
+}
+.menu__icon--uranus {
+  background-color: #65F0D5;
+}
+.menu__icon--neptune {
+  background-color: #497EFA;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50px 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr 1fr 1fr;
+  padding-bottom: 47px;
+}
+
+.group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 24px;
+}
+.group__btn {
+  cursor: pointer;
+  padding: 20px 0 16px 0;
+  background: transparent;
+  border: none;
+  font-family: "Spartan";
+  font-weight: 700;
+  color: #838391;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 4px solid transparent;
+}
+.group__btn.active {
+  color: white;
+  border-color: #42a0bd;
+}
+
+img {
+  vertical-align: top;
+}
+
+.planet {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.planet__box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.planet__img {
+  display: block;
+  width: 114px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.planet__geology {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 60px;
+  position: absolute;
+  top: 80%;
+}
+.planet__geology.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.description {
+  padding: 0 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.description__title {
+  font-family: "Antonio";
+  color: white;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+}
+.description__info {
+  padding: 16px 0 32px 0;
+  text-align: center;
+  font-family: "Spartan";
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 22px;
+  color: white;
+}
+.description__link {
+  font-family: "Spartan";
+  font-size: 12px;
+  line-height: 25px;
+  color: #838391;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.description__link--source {
+  font-weight: 400;
+}
+.description__link--target {
+  color: #838391;
+  font-weight: 700;
+  padding: 0 5px;
+}
+.description__link--icon {
+  font-size: 12px;
+}
+
+.stats {
+  padding: 0 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.stats__item {
+  padding: 9px 24px 13px 24px;
+  border: 1px solid #38384f;
+  margin: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.stats__title {
+  text-transform: uppercase;
+  font-family: "Spartan";
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.73px;
+  color: #838391;
+}
+.stats__value {
+  text-transform: uppercase;
+  font-family: "Antonio";
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -0.75px;
+  color: white;
+}

@@ -1,0 +1,120 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $border-header;
+  padding: 16px 24px;
+
+  &__logo {
+    font-family: $fontAntonio;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: -1.05px;
+  }
+}
+
+.menu {
+  list-style: none;
+  position: absolute;
+  top: 101%;
+  left: -100%;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  padding: 44px 24px 0 24px;
+  background-color: $bgColor;
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+  z-index: 999;
+
+  &.active {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__btn {
+    background: transparent;
+    border: none;
+    color: $mainColor;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color .3s ease-in-out 0s;
+
+    &.active {
+      color: $silver;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-menu-items;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__icon--circle {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+
+  &__link {
+    padding: 10px 0 10px 25px;
+    flex: 1 1 auto;
+    font-family: $fontSpartan;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1.36px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $mainColor;
+    margin: 10px 0;
+  }
+
+  &__icon {
+    font-size: 9px;
+    color: $icons-menu;
+  }
+
+  &__icon--mercury {
+    background-color: $mercuryColor;
+  }
+
+  &__icon--venus {
+    background-color: $venusColor;
+  }
+
+  &__icon--earth {
+    background-color: $earthColor;
+  }
+
+  &__icon--mars {
+    background-color: $marsColor;
+  }
+
+  &__icon--jupiter {
+    background-color: $jupiterColor;
+  }
+
+  &__icon--saturn {
+    background-color: $saturnColor;
+  }
+
+  &__icon--uranus {
+    background-color: $uranusColor;
+  }
+
+  &__icon--neptune {
+    background-color: $neptuneColor;
+  }
+}
