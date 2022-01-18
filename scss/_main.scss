@@ -1,6 +1,6 @@
 .main {
   display: grid;
-  grid-template-rows: 50px 1fr 1fr 1fr;
+  grid-template-rows: 50px 1.3fr 1fr 1fr;
   padding-bottom: 47px;
 }
 
@@ -24,10 +24,20 @@
     text-transform: uppercase;
     border-bottom: 4px solid transparent;
 
+    &--additionally {
+      pointer-events: none;
+      display: none;
+    }
+
     &.active {
       color: $mainColor;
-      border-color: hsla(194, 48%, 50%, 1);
+      border-color: var(--primary-clr);
     }
+  }
+
+  &__number {
+    pointer-events: none;
+    display: none;
   }
 }
 
@@ -61,7 +71,8 @@ img {
     transition: .5s;
     width: 60px;
     position: absolute;
-    top: 80%;
+    top: 60%;
+
     &.active {
       visibility: visible;
       opacity: 1;

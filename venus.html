@@ -1,63 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Planets fact site</title>
-</head>
-<body>
-  Venus
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+		<title>Frontend Mentor | Planets fact site</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body class="venus">
+		<div class="wrapper">
+			<header class="header">
+				<h2 class="header__logo">the planets</h2>
+				<button class="menu__btn icon-hamburger"></button>
+				<nav class="menu" id="menu">
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--mercury"></span>
+						<a href="index.html" class="menu__link">mercury</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--venus"></span>
+						<a href="venus.html" class="menu__link">venus</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--earth"></span>
 
-  <!-- Overview Content Start -->
-
-  Venus is the second planet from the Sun. It is named after the 
-  Roman goddess of love and beauty. As the brightest natural object 
-  in Earth's night sky after the Moon, Venus can cast shadows and 
-  can be, on rare occasions, visible to the naked eye in broad daylight.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Venus -->
-
-  <!-- Overview Content End -->
-
-  <!-- Internal Structure Content Start -->
-
-  The similarity in size and density between Venus and Earth suggests 
-  they share a similar internal structure: a core, mantle, and crust. 
-  Like that of Earth, Venusian core is most likely at least partially 
-  liquid because the two planets have been cooling at about the same rate.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Venus#Internal_structure -->
-
-  <!-- Internal Structure Content End -->
-
-  <!-- Surface Geology Content Start -->
-
-  Much of the Venusian surface appears to have been shaped by volcanic activity. 
-  Venus has several times as many volcanoes as Earth, and it has 167 large 
-  volcanoes that are over 100 km (60 mi) across. The only volcanic complex 
-  of this size on Earth is the Big Island of Hawaii.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Venus#Surface_geology -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  243 Days
-
-  Revolution Time
-  224.7 Days
-
-  Radius
-  6,051.8 KM
-
-  Average Temp.
-  471°c
-</body>
+						<a href="earth.html" class="menu__link">earth</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--mars"></span>
+						<a href="mars.html" class="menu__link">mars</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--jupiter"></span>
+						<a href="jupiter.html" class="menu__link">jupiter</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--saturn"></span>
+						<a href="saturn.html" class="menu__link">saturn</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--uranus"></span>
+						<a href="uranus.html" class="menu__link">uranus</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--neptune"></span>
+						<a href="neptune.html" class="menu__link">neptune</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+				</nav>
+			</header>
+			<div class="container">
+				<main class="main">
+					<div class="group">
+						<button class="group__btn active" data-role="overview"><span class="group__number">01</span> overview</button>
+						<button class="group__btn" data-role="structure">
+							<span class="group__number">02</span><span class="group__btn--additionally">internal</span> structure
+						</button>
+						<button class="group__btn" data-role="surface">
+							<span class="group__number">03</span> surface <span class="group__btn--additionally">geology</span>
+						</button>
+					</div>
+					<div class="planet">
+						<div class="planet__box">
+							<img class="planet__img" src="/" alt="" id="planet-image" />
+							<img src="/" alt="" class="planet__geology" id="planet-geology" />
+						</div>
+					</div>
+					<article class="description">
+						<h2 class="description__title" id="planet-title"></h2>
+						<p class="description__info" id="planet-info"></p>
+						<div class="description__link">
+							<span class="description__link--source">Source :</span>
+							<a class="description__link--target" href="#" id="planet-source">Wikipedia</a><span class="description__link--icon icon-source"></span>
+						</div>
+					</article>
+					<div class="stats">
+						<div class="stats__item">
+							<h4 class="stats__title">ROTATION TIME</h4>
+							<p class="stats__value" id="planet-rotation"></p>
+						</div>
+						<div class="stats__item">
+							<h4 class="stats__title">REVOLUTION TIME</h4>
+							<p class="stats__value" id="planet-revolution"></p>
+						</div>
+						<div class="stats__item">
+							<h4 class="stats__title">radius</h4>
+							<p class="stats__value" id="planet-radius"></p>
+						</div>
+						<div class="stats__item">
+							<h4 class="stats__title">AVERAGE TEMP.</h4>
+							<p class="stats__value" id="planet-average"></p>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+		<script type="module" src="main.js"></script>
+	</body>
 </html>

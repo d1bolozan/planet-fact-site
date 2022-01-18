@@ -1,63 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Planets fact site</title>
-</head>
-<body>
-  Mars
-
-  <!-- Overview Content Start -->
-
-  Mars is the fourth planet from the Sun and the second-smallest planet 
-  in the Solar System, being larger than only Mercury. In English, Mars 
-  carries the name of the Roman god of war and is often referred to as 
-  the "Red Planet".
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mars -->
-
-  <!-- Overview Content End -->
-
-  <!-- Internal Structure Content Start -->
-
-  Like Earth, Mars has differentiated into a dense metallic core overlaid 
-  by less dense materials. Scientists initially determined that the core 
-  is at least partially liquid. Current models of its interior imply a 
-  core consisting primarily of iron and nickel with about 16–17% sulfur.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mars#Internal_structure -->
-
-  <!-- Internal Structure Content End -->
-
-  <!-- Surface Geology Content Start -->
-
-  Mars is a terrestrial planet whose surface consists of minerals containing 
-  silicon and oxygen, metals, and other elements that typically make up rock. 
-  The surface is primarily composed of tholeiitic basalt, although parts are 
-  more silica-rich than typical basalt.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mars#Surface_geology -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  1.03 Days
-
-  Revolution Time
-  1.88 Years
-
-  Radius
-  3,389.5 KM
-
-  Average Temp.
-  -28°c
-</body>
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+		<title>Frontend Mentor | Planets fact site</title>
+    <link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body class="mars">
+		<div class="wrapper">
+			<header class="header">
+				<h2 class="header__logo">the planets</h2>
+				<button class="menu__btn icon-hamburger"></button>
+				<nav class="menu" id="menu">
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--mercury"></span>
+						<a href="index.html" class="menu__link">mercury</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--venus"></span>
+						<a href="venus.html" class="menu__link">venus</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--earth"></span>
+						<a href="earth.html" class="menu__link">earth</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--mars"></span>
+						<a href="mars.html" class="menu__link">mars</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--jupiter"></span>
+						<a href="jupiter.html" class="menu__link">jupiter</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--saturn"></span>
+						<a href="saturn.html" class="menu__link">saturn</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--uranus"></span>
+						<a href="uranus.html" class="menu__link">uranus</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+					<li class="menu__item">
+						<span class="menu__icon--circle menu__icon--neptune"></span>
+						<a href="neptune.html" class="menu__link">neptune</a>
+						<span class="menu__icon icon-chevron"></span>
+					</li>
+				</nav>
+			</header>
+			<div class="container">
+				<main class="main">
+					<div class="group">
+						<button class="group__btn active" data-role="overview"><span class="group__number">01</span> overview</button>
+						<button class="group__btn" data-role="structure">
+							<span class="group__number">02</span><span class="group__btn--additionally">internal</span> structure
+						</button>
+						<button class="group__btn" data-role="surface">
+							<span class="group__number">03</span> surface <span class="group__btn--additionally">geology</span>
+						</button>
+					</div>
+					<div class="planet">
+						<div class="planet__box">
+							<img class="planet__img" src="/" alt="" id="planet-image" />
+							<img src="/" alt="" class="planet__geology" id="planet-geology" />
+						</div>
+					</div>
+					<article class="description">
+						<h2 class="description__title" id="planet-title"></h2>
+						<p class="description__info" id="planet-info"></p>
+						<div class="description__link">
+							<span class="description__link--source">Source :</span>
+							<a class="description__link--target" href="#" id="planet-source">Wikipedia</a><span class="description__link--icon icon-source"></span>
+						</div>
+					</article>
+					<div class="stats">
+						<div class="stats__item">
+							<h4 class="stats__title">ROTATION TIME</h4>
+							<p class="stats__value" id="planet-rotation"></p>
+						</div>
+						<div class="stats__item">
+							<h4 class="stats__title">REVOLUTION TIME</h4>
+							<p class="stats__value" id="planet-revolution"></p>
+						</div>
+						<div class="stats__item">
+							<h4 class="stats__title">radius</h4>
+							<p class="stats__value" id="planet-radius"></p>
+						</div>
+						<div class="stats__item">
+							<h4 class="stats__title">AVERAGE TEMP.</h4>
+							<p class="stats__value" id="planet-average"></p>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+		<script type="module" src="main.js"></script>
+	</body>
 </html>

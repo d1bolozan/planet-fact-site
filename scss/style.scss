@@ -20,6 +20,31 @@ $saturnColor : #FCCB6B;
 $uranusColor : #65F0D5;
 $neptuneColor : #497EFA;
 
+.mercury{
+  --primary-clr : #419EBB;
+}
+.venus{
+  --primary-clr : #EDA249;
+}
+.earth{
+  --primary-clr : #6D2ED5;
+}
+.mars{
+  --primary-clr : #D14C32;
+}
+.jupiter{
+  --primary-clr: #D83A34;
+}
+.saturn{
+  --primary-clr: #CD5120;
+}
+.uranus{
+  --primary-clr: #1EC1A2;
+}
+.neptune{
+  --primary-clr: #2D68F0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -46,3 +71,5 @@ body {
 
 @import 'header';
 @import 'main';
+@import 'media768';
+@import 'media1440';
