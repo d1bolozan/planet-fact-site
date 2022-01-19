@@ -63,6 +63,7 @@ img {
     width: 114px;
     height: auto;
     object-fit: cover;
+    transition: all .5s;
   }
 
   &__geology {
