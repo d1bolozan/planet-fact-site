@@ -292,6 +292,8 @@ img {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .planet__geology {
   visibility: hidden;
